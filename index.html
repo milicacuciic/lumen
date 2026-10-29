@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dental Studio Lumen</title>
+<meta name="description" content="Stomatološka ordinacija u Novom Sadu za one koji su godinama odlagali dolazak. Ne žurimo, sve objasnimo unapred i stajemo kad kažete.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap">
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#F1F0E7;color:#262A20;font-family:'Hanken Grotesk',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+img{max-width:100%}
+a{color:inherit;text-decoration:none}
+a:hover{opacity:.8}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #4F6B52;outline-offset:3px;box-shadow:0 0 0 3px #FFFFFF}
+input::placeholder{color:#818B73}
+.wrap{max-width:1200px;margin:0 auto;padding-left:16px;padding-right:16px}
+.skip{position:absolute;left:-9999px;top:8px;background:#262A20;color:#FFFFFF;padding:12px 18px;font-weight:700;z-index:10;border-radius:8px}
+.skip:focus{left:8px}
+.ser{font-family:'Fraunces',Georgia,serif}
+.steps{list-style:none;margin:0;padding:0;counter-reset:s;display:flex;flex-direction:column;gap:14px}
+.steps li{counter-increment:s;display:flex;gap:16px;align-items:flex-start;font-size:18px;line-height:1.5}
+.steps li::before{content:counter(s);flex:none;width:36px;height:36px;border-radius:50%;background:#4F6B52;color:#FFFFFF;font-weight:700;font-size:17px;display:flex;align-items:center;justify-content:center}
+.svc{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:9px}
+.svc li{display:flex;gap:12px;align-items:flex-start;font-size:17px;line-height:1.45;color:#55604C}
+.svc li::before{content:"";flex:none;width:7px;height:7px;border-radius:50%;background:#4F6B52;margin-top:9px}
+.chip{min-height:52px;padding:0 24px;border-radius:999px;border:1.5px solid #262A20;font-size:18px;font-weight:600;cursor:pointer;background:#E7ECDD;color:#262A20;font-family:inherit}
+.chip[aria-pressed="true"]{background:#262A20;color:#FFFFFF}
+.fearbtn{min-height:52px;padding:0 24px;border-radius:999px;border:1.5px dashed #262A20;font-size:18px;font-weight:600;cursor:pointer;background:#FFFFFF;color:#262A20;font-family:inherit}
+.fearbtn[aria-pressed="true"]{background:#262A20;color:#FFFFFF}
+.card{padding:30px;background:#FFFFFF;border:1px solid #D6DECB;border-radius:22px;display:flex;flex-direction:column;gap:16px}
+.input{min-height:54px;padding:0 18px;border:1.5px solid #A3AD92;border-radius:14px;font-family:inherit;font-size:18px;color:#262A20;background:#FFFFFF;width:100%}
+.btn-primary{min-height:58px;border:0;border-radius:999px;background:#4F6B52;color:#FFFFFF;font-family:inherit;font-size:19px;font-weight:700;cursor:pointer}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<a class="skip" href="#sadrzaj">Preskoči na sadržaj</a>
+
+<header class="wrap" style="padding-top:26px;padding-bottom:26px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px 32px">
+  <a href="#pocetak" class="ser" style="display:flex;align-items:center;gap:12px;font-size:28px;font-weight:600;letter-spacing:-0.01em">
+    <span aria-hidden="true" style="display:inline-block;width:30px;height:16px;border-bottom:5px solid #4F6B52;border-radius:0 0 999px 999px"></span>
+    Lumen
+  </a>
+  <nav style="display:flex;flex-wrap:wrap;align-items:center;gap:4px 28px;font-size:16px;font-weight:600">
+    <a href="#usluge" style="padding:12px 0">Usluge</a>
+    <a href="#obecanja" style="padding:12px 0">Naša obećanja</a>
+    <a href="#tim" style="padding:12px 0">Tim</a>
+    <a href="#zakazivanje" style="padding:13px 26px;background:#262A20;color:#FFFFFF;border-radius:999px;font-weight:600">Zakaži termin</a>
+  </nav>
+</header>
+
+<main id="sadrzaj">
+
+  <!-- Hero -->
+  <section id="pocetak" class="wrap" style="padding-top:44px;padding-bottom:64px;display:flex;flex-wrap:wrap;align-items:center;gap:48px">
+    <div style="flex:1 1 440px;min-width:0;display:flex;flex-direction:column;gap:26px">
+      <h1 class="ser" style="margin:0;font-weight:500;font-size:clamp(42px,6.6vw,88px);line-height:1.04;letter-spacing:-0.02em;text-wrap:balance">Zubar kome ne morate da se vraćate sa strahom.</h1>
+      <p style="margin:0;max-width:32em;font-size:20px;line-height:1.6;color:#55604C">Stomatološka ordinacija u Novom Sadu za one koji su godinama odlagali dolazak. Ne žurimo, sve objasnimo unapred i stajemo kad kažete.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:14px">
+        <a href="#zakazivanje" style="padding:16px 30px;background:#4F6B52;color:#FFFFFF;border-radius:999px;font-size:18px;font-weight:700">Zakaži termin</a>
+        <a href="#usluge" style="padding:15px 28px;border:1.5px solid #262A20;border-radius:999px;font-size:18px;font-weight:700">Šta sve radimo</a>
+      </div>
+    </div>
+    <div style="flex:1 1 300px;min-width:0;display:flex;justify-content:center">
+      <div style="position:relative;width:100%;max-width:440px;aspect-ratio:1">
+        <div aria-hidden="true" style="position:absolute;top:-5%;right:-3%;width:32%;aspect-ratio:1;border-radius:46% 54% 50% 50% / 54% 46% 54% 46%;background:#DCE5D2;z-index:0"></div>
+        <img src="images/hero.jpg" alt="Pacijentkinja gleda svoj osmeh u ogledalu, uz osmeh člana tima" style="position:relative;z-index:1;width:100%;height:100%;object-fit:cover;object-position:55% 40%;border-radius:58% 42% 55% 45% / 48% 56% 44% 52%">
+      </div>
+    </div>
+  </section>
+
+  <!-- Šta vas dovodi -->
+  <section class="wrap" style="padding-bottom:88px">
+    <div style="background:#FFFFFF;border-radius:28px;padding:clamp(24px,4vw,52px);box-shadow:0 20px 50px rgba(38,42,32,0.07);display:flex;flex-direction:column;gap:34px">
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <h2 class="ser" style="margin:0;font-weight:500;font-size:clamp(26px,3.2vw,40px);line-height:1.1">Šta vas dovodi kod nas?</h2>
+        <div id="moodChips" role="group" aria-label="Razlog dolaska" style="display:flex;flex-wrap:wrap;gap:12px"></div>
+        <div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px 16px;margin-top:6px">
+          <span style="font-size:16px;font-weight:600;color:#55604C">I još nešto, ako želite:</span>
+          <button id="fearBtn" type="button" class="fearbtn" aria-pressed="false">Pomalo me je strah</button>
+        </div>
+      </div>
+
+      <div aria-live="polite" style="display:flex;flex-wrap:wrap;gap:34px 60px;align-items:flex-start">
+        <div style="flex:1 1 340px;min-width:0;display:flex;flex-direction:column;gap:18px">
+          <h3 id="moodHead" class="ser" style="margin:0;font-weight:500;font-size:clamp(30px,4.2vw,52px);line-height:1.06;letter-spacing:-0.01em;text-wrap:balance"></h3>
+          <p id="moodText" style="margin:0;max-width:32em;font-size:19px;line-height:1.6;color:#55604C"></p>
+          <div id="fearBox" hidden style="max-width:32em;padding:20px 24px;background:#E7ECDD;border-left:4px solid #4F6B52;border-radius:0 16px 16px 0;display:flex;flex-direction:column;gap:6px">
+            <h4 class="ser" style="margin:0;font-weight:500;font-size:21px">Pošto vas je strah</h4>
+            <p style="margin:0;font-size:17px;line-height:1.55;color:#55604C">Osoblje to zna unapred. Idemo polako, svaki korak objasnimo pre nego što ga uradimo, a rukom možete da zaustavite pregled u svakom trenutku.</p>
+          </div>
+          <p id="moodPrice" style="margin:0;align-self:flex-start;padding:9px 18px;background:#DCE5D2;border-radius:999px;font-size:16px;font-weight:700"></p>
+          <a href="#zakazivanje" style="align-self:flex-start;padding:16px 30px;background:#4F6B52;color:#FFFFFF;border-radius:999px;font-size:18px;font-weight:700">Zakaži termin</a>
+        </div>
+        <div style="flex:1 1 300px;min-width:0;display:flex;flex-direction:column;gap:20px;padding:28px;background:#F1F0E7;border-radius:20px">
+          <h4 class="ser" style="margin:0;font-weight:500;font-size:23px">Kako izgleda vaša poseta</h4>
+          <ol id="moodSteps" class="steps"></ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Usluge -->
+  <section id="usluge" class="wrap" style="padding-bottom:96px;display:flex;flex-direction:column;gap:40px">
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <h2 class="ser" style="margin:0;font-weight:500;font-size:clamp(32px,5vw,64px);line-height:1.04;letter-spacing:-0.02em;max-width:13em;text-wrap:balance">Sve što radimo, na jednom mestu.</h2>
+      <p style="margin:0;max-width:34em;font-size:19px;line-height:1.6;color:#55604C">Od redovne kontrole do složenijih zahvata. Za cenu izaberite razlog dolaska iznad ili nas pozovite.</p>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:20px">
+      <div class="card" style="flex:1 1 260px;min-width:0"><h3 class="ser" style="margin:0;font-weight:500;font-size:26px;line-height:1.1">Opšta stomatologija</h3><ul class="svc"><li>Pregled i savet</li><li>Plombe</li><li>Lečenje kanala</li><li>Skidanje kamenca i poliranje</li><li>Vađenje zuba</li></ul></div>
+      <div class="card" style="flex:1 1 260px;min-width:0"><h3 class="ser" style="margin:0;font-weight:500;font-size:26px;line-height:1.1">Estetska stomatologija</h3><ul class="svc"><li>Izbeljivanje zuba</li><li>Estetske plombe</li><li>Fasete</li><li>Korekcija oblika zuba</li></ul></div>
+      <div class="card" style="flex:1 1 260px;min-width:0"><h3 class="ser" style="margin:0;font-weight:500;font-size:26px;line-height:1.1">Ortodoncija</h3><ul class="svc"><li>Fiksni aparat</li><li>Providne folije</li><li>Retejneri posle terapije</li><li>Konsultacija za decu i odrasle</li></ul></div>
+      <div class="card" style="flex:1 1 260px;min-width:0"><h3 class="ser" style="margin:0;font-weight:500;font-size:26px;line-height:1.1">Dečja stomatologija</h3><ul class="svc"><li>Prvi pregled kroz igru</li><li>Zalivanje brazdi</li><li>Lečenje mlečnih zuba</li><li>Saveti za roditelje</li></ul></div>
+      <div class="card" style="flex:1 1 260px;min-width:0"><h3 class="ser" style="margin:0;font-weight:500;font-size:26px;line-height:1.1">Protetika</h3><ul class="svc"><li>Keramičke krunice</li><li>Mostovi</li><li>Proteze</li><li>Privremeni nadomesci</li></ul></div>
+      <div class="card" style="flex:1 1 260px;min-width:0"><h3 class="ser" style="margin:0;font-weight:500;font-size:26px;line-height:1.1">Zdravlje desni</h3><ul class="svc"><li>Lečenje krvarenja desni</li><li>Dubinsko čišćenje</li><li>Kontrole i održavanje</li></ul></div>
+      <div class="card" style="flex:1 1 260px;min-width:0"><h3 class="ser" style="margin:0;font-weight:500;font-size:26px;line-height:1.1">Oralna hirurgija</h3><ul class="svc"><li>Vađenje umnjaka</li><li>Manji hirurški zahvati</li><li>Konsultacija za implantate</li></ul></div>
+      <div style="flex:1 1 260px;min-width:0;padding:30px;background:#262A20;color:#F1F0E7;border-radius:22px;display:flex;flex-direction:column;gap:16px">
+        <h3 class="ser" style="margin:0;font-weight:500;font-size:26px;line-height:1.1;color:#FFFFFF">Hitna pomoć</h3>
+        <ul class="svc" style="color:#CBD3BE"><li style="color:#CBD3BE">Bol i otok</li><li style="color:#CBD3BE">Slomljen ili izbijen zub</li><li style="color:#CBD3BE">Ispala plomba ili krunica</li></ul>
+        <p style="margin:0;font-size:16px;line-height:1.5;color:#CBD3BE">Kod jakog bola pozovite, tražimo najraniji termin.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Obećanja -->
+  <section id="obecanja" class="wrap" style="padding-bottom:96px;display:flex;flex-direction:column;gap:40px">
+    <h2 class="ser" style="margin:0;font-weight:500;font-size:clamp(32px,5vw,64px);line-height:1.04;letter-spacing:-0.02em;max-width:12em;text-wrap:balance">Tri stvari koje obećavamo.</h2>
+    <div style="display:flex;flex-wrap:wrap;gap:20px">
+      <div class="card" style="flex:1 1 280px;min-width:0;padding:36px;gap:12px"><span class="ser" aria-hidden="true" style="font-size:40px;font-weight:600;color:#4F6B52">01</span><h3 class="ser" style="margin:0;font-weight:500;font-size:28px;line-height:1.1">Rukom kažete stop.</h3><p style="margin:0;font-size:18px;line-height:1.55;color:#55604C">Dok god podignete ruku, pravimo pauzu. Bez pitanja i bez ubeđivanja.</p></div>
+      <div class="card" style="flex:1 1 280px;min-width:0;padding:36px;gap:12px"><span class="ser" aria-hidden="true" style="font-size:40px;font-weight:600;color:#4F6B52">02</span><h3 class="ser" style="margin:0;font-weight:500;font-size:28px;line-height:1.1">Prvo objasnimo.</h3><p style="margin:0;font-size:18px;line-height:1.55;color:#55604C">Pre svake intervencije kažemo šta radimo i zašto, jednostavnim rečima.</p></div>
+      <div class="card" style="flex:1 1 280px;min-width:0;padding:36px;gap:12px"><span class="ser" aria-hidden="true" style="font-size:40px;font-weight:600;color:#4F6B52">03</span><h3 class="ser" style="margin:0;font-weight:500;font-size:28px;line-height:1.1">Cena je unapred.</h3><p style="margin:0;font-size:18px;line-height:1.55;color:#55604C">Tačnu cenu dobijate pre početka lečenja. Bez računa koji iznenadi.</p></div>
+    </div>
+  </section>
+
+  <!-- Tim -->
+  <section id="tim" class="wrap" style="padding-bottom:96px;display:flex;flex-direction:column;gap:40px">
+    <h2 class="ser" style="margin:0;font-weight:500;font-size:clamp(32px,5vw,64px);line-height:1.04;letter-spacing:-0.02em">Ljudi koje ćete upoznati.</h2>
+    <div style="display:flex;flex-wrap:wrap;align-items:flex-end;gap:36px 28px">
+      <div style="flex:1 1 280px;max-width:360px;min-width:0;display:flex;flex-direction:column;gap:18px">
+        <img src="images/teodora.jpg" alt="Dr Teodora Ilić, doktor stomatologije" style="width:100%;aspect-ratio:1;object-fit:cover;object-position:34% 22%;border-radius:56% 44% 52% 48% / 46% 54% 46% 54%;display:block">
+        <div><p class="ser" style="margin:0;font-size:26px;font-weight:500">Dr Teodora Ilić</p><p style="margin:4px 0 0;font-size:17px;color:#55604C">Doktor stomatologije</p></div>
+      </div>
+      <div style="flex:1 1 280px;max-width:360px;min-width:0;display:flex;flex-direction:column;gap:18px">
+        <img src="images/nikola.jpg" alt="Dr Nikola Vuković, specijalista ortodoncije" style="width:100%;aspect-ratio:1;object-fit:cover;object-position:60% 16%;border-radius:46% 54% 44% 56% / 54% 46% 54% 46%;display:block">
+        <div><p class="ser" style="margin:0;font-size:26px;font-weight:500">Dr Nikola Vuković</p><p style="margin:4px 0 0;font-size:17px;color:#55604C">Specijalista ortodoncije</p></div>
+      </div>
+      <div style="flex:0 1 220px;min-width:0;display:flex;flex-direction:column;gap:18px">
+        <img src="images/marija.jpg" alt="Marija Savić, stomatološka sestra" style="width:100%;aspect-ratio:1;object-fit:cover;object-position:74% 24%;border-radius:52% 48% 58% 42% / 44% 56% 44% 56%;display:block">
+        <div><p class="ser" style="margin:0;font-size:23px;font-weight:500">Marija Savić</p><p style="margin:4px 0 0;font-size:16px;color:#55604C">Stomatološka sestra</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Zakazivanje -->
+  <section id="zakazivanje" style="background:#262A20;color:#F1F0E7">
+    <div class="wrap" style="padding-top:88px;padding-bottom:88px;display:flex;flex-wrap:wrap;gap:48px 80px">
+      <div style="flex:1 1 320px;min-width:0;display:flex;flex-direction:column;gap:22px">
+        <h2 class="ser" style="margin:0;font-weight:500;font-size:clamp(36px,5.6vw,72px);line-height:1.04;letter-spacing:-0.02em;text-wrap:balance;color:#FFFFFF">Javite se kad budete spremni.</h2>
+        <p style="margin:0;max-width:26em;font-size:19px;line-height:1.6;color:#CBD3BE">Ostavite broj i javićemo vam se istog dana. Možete samo da pitate, ne morate odmah da zakažete.</p>
+        <div style="font-size:18px;line-height:1.7;color:#CBD3BE">
+          <div style="font-weight:700;color:#FFFFFF">Radno vreme</div>
+          <div>Ponedeljak do petak 09–20 h</div>
+          <div>Subota 09–14 h</div>
+          <div style="margin-top:14px;font-weight:700;color:#FFFFFF">Kontakt</div>
+          <div>[ADRESA], Novi Sad</div>
+          <div>[BROJ TELEFONA]</div>
+        </div>
+      </div>
+      <div style="flex:1 1 400px;min-width:0;background:#FFFFFF;color:#262A20;border-radius:24px;padding:36px;display:flex;flex-direction:column;gap:22px">
+        <form id="zakForm" style="display:flex;flex-direction:column;gap:22px">
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <span style="font-size:16px;font-weight:700">Dolazim zbog</span>
+            <div id="formMood" style="padding:14px 18px;background:#DCE5D2;border-radius:14px;font-size:18px;font-weight:700"></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:14px">
+            <input id="strah" type="checkbox" style="width:26px;height:26px;flex:none;accent-color:#4F6B52;cursor:pointer">
+            <label for="strah" style="font-size:17px;line-height:1.4;cursor:pointer">Pomalo me je strah, neka osoblje zna da idemo polako</label>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <label for="ime" style="font-size:16px;font-weight:700">Ime</label>
+            <input id="ime" class="input" type="text" autocomplete="name" placeholder="Kako da vas oslovljavamo">
+          </div>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <label for="telefon" style="font-size:16px;font-weight:700">Broj telefona</label>
+            <input id="telefon" class="input" type="tel" autocomplete="tel" placeholder="06x xxx xxxx">
+          </div>
+          <button type="submit" class="btn-primary">Javite mi se</button>
+        </form>
+        <div id="zakThanks" role="status" hidden style="display:flex;flex-direction:column;gap:14px;padding:24px 0">
+          <h3 class="ser" style="margin:0;font-weight:500;font-size:34px;line-height:1.08">Hvala, javljamo vam se danas.</h3>
+          <p id="thanksText" style="margin:0;font-size:18px;line-height:1.6;color:#55604C"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer style="background:#1C2018;color:#BEC7B0">
+  <div class="wrap" style="padding-top:28px;padding-bottom:40px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 32px;font-size:15px">
+    <span>Dental Studio Lumen</span>
+    <span>Izmišljeni brend. Koncept i dizajn: Milica Cucić, MC Design.</span>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var MOODS = [
+    { id:'odavno', label:'Odavno nisam bio/la kod zubara', head:'Nikad nije kasno.',
+      text:'Ne pitamo zašto je prošlo toliko godina i ne držimo predavanja. Pogledamo kakvo je stanje, iskreno vam kažemo šta treba i kojim redom, pa idemo korak po korak.',
+      price:'Prvi pregled 2.500 din',
+      steps:['Pregled i razgovor, bez osuđivanja','Snimak i jasna slika stanja','Plan po koracima, a tempo birate vi'] },
+    { id:'bol', label:'Boli me zub', head:'Prvo da smanjimo bol.',
+      text:'Kod bola prvo tražimo uzrok i olakšanje, a o ostalom razgovaramo posle. Ostavite broj, pa dogovaramo najraniji mogući termin.',
+      price:'Pregled 2.500 din, plomba od 5.000 din',
+      steps:['Kratak razgovor: gde boli i od kada','Snimak i pregled, uz anesteziju ako treba','Plan lečenja i cena pre nego što nastavimo'] },
+    { id:'kontrola', label:'Dolazim na kontrolu', head:'To je najbolji razlog.',
+      text:'Redovna kontrola je najlakši način da zubi ostanu zdravi. Pregledamo, skinemo kamenac i kažemo vam šta stvarno treba, a šta ne.',
+      price:'Pregled 2.500 din, kamenac od 4.000 din',
+      steps:['Pregled zuba i desni','Skidanje kamenca i poliranje','Saveti za kuću, bez ubeđivanja'] },
+    { id:'dete', label:'Vodim dete', head:'Prvi pregled treba da bude lep.',
+      text:'Sa decom ne žurimo. Prvo se upoznamo, pokažemo aparate kao igru i pregledamo tek kada dete bude spremno. Roditelj je uz dete sve vreme.',
+      price:'Dečji pregled 2.000 din',
+      steps:['Dete sedne gde želi i razgleda aparate','Pregled zuba kroz igru brojanja','Roditelj dobija jasan savet za kući'] },
+    { id:'osmeh', label:'Želim lepši osmeh', head:'Osmeh po vašoj meri.',
+      text:'Pogledamo gde ste danas, pokažemo šta je realno moguće i dogovorimo korake. Bez obećanja koja ne možemo da ispunimo.',
+      price:'Izbeljivanje od 18.000 din',
+      steps:['Razgovor o tome šta vam smeta','Izbor nijanse i plan tretmana','Tretman i saveti za održavanje'] }
+  ];
+  var state = { mood: 'odavno', fear: false, sent: false };
+
+  var chipsEl = document.getElementById('moodChips');
+  var headEl = document.getElementById('moodHead');
+  var textEl = document.getElementById('moodText');
+  var priceEl = document.getElementById('moodPrice');
+  var stepsEl = document.getElementById('moodSteps');
+  var fearBtn = document.getElementById('fearBtn');
+  var fearBox = document.getElementById('fearBox');
+  var fearCb = document.getElementById('strah');
+  var formMood = document.getElementById('formMood');
+  var form = document.getElementById('zakForm');
+  var thanks = document.getElementById('zakThanks');
+  var thanksText = document.getElementById('thanksText');
+
+  function cur() { return MOODS.filter(function (m) { return m.id === state.mood; })[0]; }
+
+  MOODS.forEach(function (m) {
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'chip';
+    b.textContent = m.label;
+    b.setAttribute('aria-pressed', 'false');
+    b.addEventListener('click', function () { state.mood = m.id; render(); });
+    chipsEl.appendChild(b);
+  });
+
+  fearBtn.addEventListener('click', function () { state.fear = !state.fear; render(); });
+  fearCb.addEventListener('change', function () { state.fear = fearCb.checked; render(); });
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    state.sent = true;
+    render();
+  });
+
+  function render() {
+    var c = cur();
+    Array.prototype.forEach.call(chipsEl.children, function (b) {
+      b.setAttribute('aria-pressed', b.textContent === c.label ? 'true' : 'false');
+    });
+    headEl.textContent = c.head;
+    textEl.textContent = c.text;
+    priceEl.textContent = c.price;
+    stepsEl.innerHTML = '';
+    c.steps.forEach(function (t) {
+      var li = document.createElement('li');
+      li.textContent = t;
+      stepsEl.appendChild(li);
+    });
+    fearBtn.setAttribute('aria-pressed', state.fear ? 'true' : 'false');
+    fearBox.hidden = !state.fear;
+    fearCb.checked = state.fear;
+    formMood.textContent = c.label;
+    if (state.sent) {
+      form.hidden = true;
+      thanks.hidden = false;
+      thanksText.textContent = 'Razlog dolaska: ' + c.label + '.' + (state.fear ? ' Zabeleženo da idemo polako.' : '') + ' Ovo je primer forme, pa se zahtev nigde ne šalje.';
+    }
+  }
+
+  render();
+})();
+</script>
+</body>
+</html>
