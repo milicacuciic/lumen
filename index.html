@@ -33,6 +33,22 @@ input::placeholder{color:#818B73}
 .card{padding:30px;background:#FFFFFF;border:1px solid #D6DECB;border-radius:22px;display:flex;flex-direction:column;gap:16px}
 .input{min-height:54px;padding:0 18px;border:1.5px solid #A3AD92;border-radius:14px;font-family:inherit;font-size:18px;color:#262A20;background:#FFFFFF;width:100%}
 .btn-primary{min-height:58px;border:0;border-radius:999px;background:#4F6B52;color:#FFFFFF;font-family:inherit;font-size:19px;font-weight:700;cursor:pointer}
+header{position:relative}
+.burger{display:none;align-items:center;gap:10px;min-height:48px;padding:0 18px;border-radius:999px;background:#F1F0E7;color:#262A20;border:1.5px solid #262A20;font:600 15px 'Hanken Grotesk',sans-serif;cursor:pointer}
+.bars{display:flex;flex-direction:column;gap:5px;width:20px}
+.bars i{display:block;height:2.5px;border-radius:2px;background:#262A20;transition:transform .25s ease,opacity .2s ease}
+.burger[aria-expanded="true"] .bars i:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+.burger[aria-expanded="true"] .bars i:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] .bars i:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+.mainnav{display:flex;flex-wrap:wrap;align-items:center;gap:4px 28px;font-size:16px;font-weight:600}
+@media (max-width:760px){
+header{flex-wrap:nowrap!important;gap:0 12px!important}
+.burger{display:inline-flex;flex:none}
+.mainnav{display:none;position:absolute;left:0;right:0;top:100%;z-index:30;flex-direction:column;align-items:stretch;gap:0;background:#F1F0E7;border-top:1.5px solid #262A20;border-bottom:1.5px solid #262A20;padding:8px 16px 18px}
+.mainnav.open{display:flex}
+.mainnav a{padding:15px 0;min-height:48px;border-bottom:1px solid #D6DECB;font-size:18px}
+.mainnav a:last-child{margin-top:12px;text-align:center;border-bottom:0}
+}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
 </head>
@@ -45,11 +61,15 @@ input::placeholder{color:#818B73}
     <span aria-hidden="true" style="display:inline-block;width:30px;height:16px;border-bottom:5px solid #4F6B52;border-radius:0 0 999px 999px"></span>
     Lumen
   </a>
-  <nav style="display:flex;flex-wrap:wrap;align-items:center;gap:4px 28px;font-size:16px;font-weight:600">
-    <a href="#usluge" style="padding:12px 0">Usluge</a>
-    <a href="#obecanja" style="padding:12px 0">Naša obećanja</a>
-    <a href="#tim" style="padding:12px 0">Tim</a>
-    <a href="#zakazivanje" style="padding:13px 26px;background:#262A20;color:#FFFFFF;border-radius:999px;font-weight:600">Zakaži termin</a>
+  <button type="button" class="burger" id="burger" aria-expanded="false" aria-controls="glavni-meni" aria-label="Otvori meni">
+    <span class="bars" aria-hidden="true"><i></i><i></i><i></i></span>
+    <span>Meni</span>
+  </button>
+  <nav id="glavni-meni" aria-label="Glavna navigacija" class="mainnav" style="font-size:16px;font-weight:600">
+    <a href="#usluge" data-close style="padding:12px 0">Usluge</a>
+    <a href="#obecanja" data-close style="padding:12px 0">Naša obećanja</a>
+    <a href="#tim" data-close style="padding:12px 0">Tim</a>
+    <a href="#zakazivanje" data-close style="padding:13px 26px;background:#262A20;color:#FFFFFF;border-radius:999px;font-weight:600">Zakaži termin</a>
   </nav>
 </header>
 
@@ -108,7 +128,7 @@ input::placeholder{color:#818B73}
   <section id="usluge" class="wrap" style="padding-bottom:96px;display:flex;flex-direction:column;gap:40px">
     <div style="display:flex;flex-direction:column;gap:16px">
       <h2 class="ser" style="margin:0;font-weight:500;font-size:clamp(32px,5vw,64px);line-height:1.04;letter-spacing:-0.02em;max-width:13em;text-wrap:balance">Sve što radimo, na jednom mestu.</h2>
-      <p style="margin:0;max-width:34em;font-size:19px;line-height:1.6;color:#55604C">Od redovne kontrole do složenijih zahvata. Za cenu izaberite razlog dolaska iznad ili nas pozovite.</p>
+      <p style="margin:0;max-width:34em;font-size:19px;line-height:1.6;color:#55604C">Od redovne kontrole do složenijih zahvata. Okvirnu cenu vidite u delu „Šta vas dovodi kod nas", a tačnu uvek kažemo pre početka lečenja.</p>
     </div>
     <div style="display:flex;flex-wrap:wrap;gap:20px">
       <div class="card" style="flex:1 1 260px;min-width:0"><h3 class="ser" style="margin:0;font-weight:500;font-size:26px;line-height:1.1">Opšta stomatologija</h3><ul class="svc"><li>Pregled i savet</li><li>Plombe</li><li>Lečenje kanala</li><li>Skidanje kamenca i poliranje</li><li>Vađenje zuba</li></ul></div>
@@ -244,6 +264,21 @@ input::placeholder{color:#818B73}
   var form = document.getElementById('zakForm');
   var thanks = document.getElementById('zakThanks');
   var thanksText = document.getElementById('thanksText');
+
+  var burger = document.getElementById('burger');
+  var nav = document.getElementById('glavni-meni');
+  burger.addEventListener('click', function () {
+    var open = nav.classList.toggle('open');
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    burger.setAttribute('aria-label', open ? 'Zatvori meni' : 'Otvori meni');
+  });
+  Array.prototype.forEach.call(document.querySelectorAll('[data-close]'), function (a) {
+    a.addEventListener('click', function () {
+      nav.classList.remove('open');
+      burger.setAttribute('aria-expanded', 'false');
+      burger.setAttribute('aria-label', 'Otvori meni');
+    });
+  });
 
   function cur() { return MOODS.filter(function (m) { return m.id === state.mood; })[0]; }
 
